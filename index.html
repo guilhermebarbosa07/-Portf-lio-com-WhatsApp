@@ -1,11 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Barbosa | Portfólio</title>
 </head>
+
 <body>
+    <div id="tsparticles"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="secao-inicio">
+        <img src="./img/foto_Guilherme.png" alt="Foto de Guilherme Barbosa" class="foto-perfil">
+        <h1>Guilherme Barbosa</h1>
+        <p>Desenvolvedor Front-End</p>
+    </main>
+
+    <section id="sobre" class="secao">
+        <h2 class="titulo-secao">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Meu nome é Guilherme Barbosa e sou um "desenvolvedor front-end" com a missão de
+                transformar ideias em experiências digitais impactantes. Combinando meu domínio em "HTML, CSS e
+                JavaScript", crio interfaces que não são apenas funcionais, mas também intuitivas e visualmente
+                deslumbrantes. Estou sempre em busca de novos desafios e tecnologias para expandir meu
+                conhecimento e garantir que cada projeto seja entregue com o mais alto padrão de qualidade e
+                inovação.
+            </p>
+        </div>
+    </section>
+
+    <section id="habilidades" class="secao">
+        <h2 class="titulo-secao">Minhas Habilidades</h2>
+        <div class="habilidades-caixa">
+            <div class="habilidade-card">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-js-square"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-node-js"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="habilidade-card">
+                <i class="fab fa-git-alt"></i>
+                <p>Git</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="secao">
+        <h2 class="titulo-secao">Experiência e Educação</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Desenvolvedor Front-End</h3>
+                <p class="timeline-data">2025 - Presente</p>
+                <p class="timeline-descricao">Desenvolvimento de interfaces de usuário responsivas, utilizando HTML,
+                    CSS, e JavaScript.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Analise de Desenvolvimento e Sistemas</h3>
+                <p class="timeline-empresa">Anhanguera</p>
+                <p class="timeline-data">2025 - 2027</p>
+                <p class="timeline-descricao">Aprofundamento em fundamentos de web, frameworks e boas práticas de
+                    codificação.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="secao">
+        <h2 class="titulo-secao">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="img/loja de carro.png" alt="Projeto Loja de Carro" class="projetos-imagem">
+                <h3 class="info-projetos">Loja de Carro</h3>
+                <p class="paragrafo-projetos">Uma loja virtual de carros executivos que oferece um showroom online
+                    com fotos de alta qualidade e um processo de compra seguro e transparente.</p>
+            </div>
+            <div class="projetos-card">
+                <img src="img/login.png" alt="Projeto Login Automação" class="projetos-imagem">
+                <h3 class="info-projetos">Login Automação</h3>
+                <p class="paragrafo-projetos">Sinta a automação em cada clique. Uma página de login com design limpo
+                    e moderno que reflete a precisão e a eficiência de sistemas automatizados.</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="contato" class="secao">
+    <h2 class="titulo-secao">Contato</h2>
     
+    <form name="contact" method="POST" data-netlify="true" class="formulario-contato">
+        <input type="text" name="nome" placeholder="Seu Nome" class="campo-form" required>
+        <input type="email" name="email" placeholder="Seu E-mail" class="campo-form" required>
+        <textarea name="mensagem" class="text-form" placeholder="Digite sua Mensagem" required></textarea>
+        <button type="submit" class="botao-enviar">Enviar</button>
+    </form>
+</section>
+<section class="cta-secao">
+    <div class="cta-caixa">
+        <h2>Pronto para começarmos?</h2>
+        <p>Entre em contato para discutirmos o seu próximo projeto!</p>
+        <a href="#contato" class="botao-cta">Fale Comigo</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Guilherme Barbosa. Todos os direitos reservados.</p>
+    <div class="social-icons">
+        <a href="https://github.com/seu-perfil" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/seu-perfil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+<script src="app.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,360 @@
+/* Documentação: Estilos Globais e Reset */
+/* Aqui, definimos estilos que se aplicam a toda a página. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não alterem a largura final dos elementos */
+}
+
+html {
+    scroll-behavior: smooth; /* Efeito de rolagem suave ao clicar nos links do menu */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal da página */
+    background-color: #121212; /* Cor de fundo escura para o tema */
+    color: #e0e0e0; /* Cor do texto principal (um branco suave) */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Documentação: Estilização da Barra de Navegação */
+.navegacao {
+    padding: 1rem 0;
+    position: fixed; /* Fixa o menu no topo da página */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    
+}
+
+.menu {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens do menu horizontalmente */
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 2rem; /* Espaçamento entre os itens do menu */
+}
+
+.menu a {
+    color: #e0e0e0;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease; /* Efeito de transição suave na cor */
+}
+
+.menu a:hover {
+    color: #00aaff; /* Cor de destaque ao passar o mouse */
+}
+
+/* Documentação: Estilização da Seção de Início (Cabeçalho) */
+.secao-inicio {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    text-align: center;
+    padding-top: 60px; /* Espaço para não ficar atrás do menu fixo */
+}
+
+
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 3px solid #00aaff; /* Borda com a cor de destaque */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-bottom: 1rem;
+}
+
+.secao-inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.secao-inicio p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+/* Documentação: Estilos Gerais para as Seções */
+.secao {
+    padding: 80px 10%; /* Espaçamento interno (80px em cima/baixo, 10% nas laterais) */
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00aaff; /* Cor de destaque para os títulos */
+}
+
+/* Documentação: Estilização da Seção de Projetos */
+.projetos-caixa {
+    display: flex; /* Alinha os cards lado a lado */
+    justify-content: center; /* Centraliza os cards */
+    gap: 2rem; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo em telas menores */
+}
+
+.projetos-card {
+    background-color: #1e1e1e;
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas */
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+}
+
+.projetos-card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.3); /* Sombra com cor de destaque */
+}
+
+.projetos-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info-projetos, .paragrafo-projetos {
+    padding: 1rem;
+}
+
+.info-projetos {
+    color: #00aaff;
+    margin-bottom: 0.5rem;
+}
+
+/* Documentação: Estilização da Seção de Contato (Formulário) */
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaçamento entre os campos do formulário */
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.campo-form, .text-form {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.campo-form:focus, .text-form:focus {
+    outline: none; /* Remove a borda padrão ao focar */
+    border-color: #00aaff; /* Muda a cor da borda ao focar */
+}
+
+.text-form {
+    height: 150px;
+    resize: vertical; /* Permite que o usuário redimensione a altura */
+}
+
+.botao-enviar {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00aaff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+    background-color: #0088cc; /* Escurece o botão ao passar o mouse */
+}
+/* Documentação: Estilos para o fundo animado de partículas */
+#tsparticles {
+    position: fixed; /* Fixa o elemento na tela, para que não role com a página */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* MÁGICA! Isso envia o contêiner para trás de todos os outros elementos */
+}
+
+/* Documentação: Estilização da Seção de Habilidades */
+/* Documentação: Estilização da Seção de Habilidades */
+.habilidades-caixa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.habilidade-card {
+    text-align: center;
+    color: #00aaff;
+    transition: transform 0.3s ease;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-10px);
+}
+
+.habilidade-card i {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.habilidade-card p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Documentação: Estilização da Seção de Experiência e Educação (Timeline) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #00aaff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -8px;
+    background-color: #121212;
+    border: 2px solid #00aaff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 3rem;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: #00aaff;
+}
+
+.timeline-empresa, .timeline-data {
+    font-size: 1rem;
+    color: #cccccc;
+    font-weight: 300;
+}
+
+.timeline-descricao {
+    margin-top: 0.5rem;
+    color: #e0e0e0;
+}
+
+/* Documentação: Estilização da Seção de Call to Action (CTA) */
+.cta-secao {
+    padding: 5rem 10%;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.cta-caixa h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00aaff;
+}
+
+.cta-caixa p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.botao-cta {
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cta:hover {
+    background-color: #0088cc;
+}
+
+/* Documentação: Estilização do Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #121212;
+    color: #e0e0e0;
+    border-top: 1px solid #2a2a2a;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00aaff;
+}
+/* Documentação: Animação sutil para os ícones de habilidades */
+/* Define a animação de pulso */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #00aaff;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #ffffff; /* Brilho mais forte no meio da animação */
+    }
+    100% {
+        transform: scale(1);
+        color: #00aaff;
+    }
+}
+
+/* Aplica a animação no hover */
+.habilidade-card:hover {
+    animation: pulse 1.5s infinite; /* A animação 'pulse' dura 1.5s e repete infinitamente */
+}
