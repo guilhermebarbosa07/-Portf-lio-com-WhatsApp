@@ -358,3 +358,85 @@ footer {
 .habilidade-card:hover {
     animation: pulse 1.5s infinite; /* A animação 'pulse' dura 1.5s e repete infinitamente */
 }
+
+/* Documentação: Responsividade para ecrãs menores (smartphones e tablets) */
+/* Usamos uma media query para aplicar estilos apenas quando a largura da tela for menor que 768px. */
+
+@media (max-width: 768px) {
+    /* Ajustes Gerais */
+    body {
+        font-size: 14px; /* Diminui o tamanho da fonte base para ecrãs menores */
+    }
+
+    .secao {
+        padding: 60px 5%; /* Diminui o espaçamento lateral para aproveitar mais o ecrã */
+    }
+
+    .titulo-secao {
+        font-size: 1.8rem; /* Diminui o tamanho do título */
+    }
+
+    /* Navegação */
+    .navegacao {
+        padding: 0.8rem 0; /* Diminui o padding da barra de navegação */
+    }
+
+    .menu {
+        gap: 1rem; /* Reduz o espaço entre os links */
+    }
+
+    .menu a {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte dos links */
+    }
+
+    /* Seção de Início */
+    .secao-inicio h1 {
+        font-size: 2rem; /* Diminui o tamanho do título principal */
+    }
+
+    .secao-inicio p {
+        font-size: 1rem; /* Diminui o tamanho do subtítulo */
+    }
+
+    /* Habilidades e Projetos */
+    /* Garante que os cards se empilhem em ecrãs menores */
+    .habilidades-caixa, .projetos-caixa {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+    }
+    
+    .projetos-card {
+        width: 100%; /* Faz com que os cards de projeto ocupem a largura total */
+        max-width: 350px; /* Limita a largura máxima para ecrãs de tablet */
+    }
+    
+    /* Linha do tempo (Experiência e Educação) */
+    .timeline::after {
+        left: 31px; /* Move a linha vertical para a esquerda */
+    }
+
+    .timeline-item {
+        width: 100%; /* Faz com que os itens ocupem a largura total */
+        padding-left: 5rem; /* Adiciona espaço à esquerda para o conteúdo */
+        padding-right: 1rem; /* Adiciona um pouco de espaço à direita */
+    }
+
+    .timeline-item::after {
+        left: 23px; /* Posiciona o círculo na nova linha vertical */
+    }
+    
+    /* Remove o estilo de itens pares e ímpares, pois não são mais necessários com o layout de coluna */
+    .timeline-item:nth-child(even) {
+        left: 0%;
+        padding-left: 5rem;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+        left: 23px;
+    }
+
+    /* Formulário de Contato */
+    .formulario-contato {
+        padding: 0 1rem; /* Adiciona um pouco de espaço nas laterais do formulário */
+    }
+}
