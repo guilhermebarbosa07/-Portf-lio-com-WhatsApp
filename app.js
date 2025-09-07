@@ -74,3 +74,39 @@ tsParticles.load("tsparticles", {
     // Desliga a detecção de retina para manter a performance
     detectRetina: false
 });
+
+// --- CÓDIGO PARA ENVIAR FORMULÁRIO PARA O WHATSAPP ---
+
+// Documentação: Esta função será executada quando a página carregar.
+document.addEventListener('DOMContentLoaded', function() {
+
+    // 1. Seleciona o formulário pelo ID que definimos no HTML.
+    const form = document.getElementById('form-whatsapp');
+
+    // 2. Adiciona um "escutador" que espera pelo evento de "submit" (envio) do formulário.
+    form.addEventListener('submit', function(event) {
+        
+        // 3. Previne o comportamento padrão do formulário, que seria recarregar a página.
+        event.preventDefault();
+
+        // 4. Seu número de WhatsApp já está configurado aqui!
+        // Formato: 55 (Brasil) + 65 (seu DDD) + 998105455 (seu número).
+        const numeroWhatsapp = "5565998105455";
+
+        // 5. Pega os valores que o usuário digitou nos campos de nome e mensagem.
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+
+        // 6. Monta o texto da mensagem que será enviada.
+        const textoMensagem = `Olá! Meu nome é ${nome}. Gostaria de falar sobre: ${mensagem}`;
+
+        // 7. Codifica a mensagem para um formato que a URL do WhatsApp entenda (troca espaços por %20, etc.).
+        const textoCodificado = encodeURIComponent(textoMensagem);
+
+        // 8. Cria o link final para a API do WhatsApp.
+        const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${textoCodificado}`;
+
+        // 9. Abre o WhatsApp em uma nova aba com a mensagem pronta.
+        window.open(urlWhatsapp, '_blank');
+    });
+});
